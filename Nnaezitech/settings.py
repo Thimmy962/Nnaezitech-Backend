@@ -16,6 +16,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://nnaezifrontend.onrender.com",
 ]
 
+CORS_ALLOW_CREDENTIALS = True
+
 # Application definition
 
 
