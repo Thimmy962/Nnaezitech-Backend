@@ -10,8 +10,11 @@ SECRET_KEY = 'django-insecure-ba70!f1_)lwkrt$od-^19hkrc@v0s+22zb07zlo!pvh%dnok!5
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = os.environ.get("DEBUG", 'False').lower()  == 'true'
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
-SECRET_KEY = os.environ.get("SECRET_KEY")
+# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = [
+
+]
+# SECRET_KEY = os.environ.get("SECRET_KEY")
 
 CORS_ALLOWED_ORIGINS = [
     "https://nnaezifrontend.onrender.com",
@@ -20,9 +23,6 @@ CORS_ALLOWED_ORIGINS = [
 mimetypes.add_type("text/css", ".css", True)
 
 CORS_ALLOW_CREDENTIALS = True
-
-# Application definition
-
 
 
 INSTALLED_APPS = [
@@ -79,8 +79,8 @@ DATABASES = {
     }
 }
 
-database_url = os.environ.get('DATABASE_URL')
-DATABASES['default'] = parse(database_url)
+# database_url = os.environ.get('DATABASE_URL')
+# DATABASES['default'] = parse(database_url)
 
 
 # Password validation
