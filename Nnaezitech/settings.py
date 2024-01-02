@@ -12,9 +12,13 @@ DEBUG = os.environ.get("DEBUG", 'False').lower()  == 'true'
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-
+CORS_ALLOWED_ORIGINS = [
+    "https://nnaezifrontend.onrender.com",
+]
 
 # Application definition
+
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
