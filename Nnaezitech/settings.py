@@ -10,11 +10,9 @@ SECRET_KEY = 'django-insecure-ba70!f1_)lwkrt$od-^19hkrc@v0s+22zb07zlo!pvh%dnok!5
 
 DEBUG = os.environ.get("DEBUG", 'False').lower()  == 'true'
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+CORS_ALLOWED_ORIGINS = os.environ.get("ALLOWED_ORIGINS").split(" ")
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-CORS_ALLOWED_ORIGINS = [
-    "https://nnaezifrontend.onrender.com",
-]
 
 CORS_ALLOW_CREDENTIALS = True
 
