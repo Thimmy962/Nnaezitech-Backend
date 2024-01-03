@@ -10,7 +10,7 @@ SECRET_KEY = 'django-insecure-ba70!f1_)lwkrt$od-^19hkrc@v0s+22zb07zlo!pvh%dnok!5
 
 DEBUG = os.environ.get("DEBUG", 'False').lower()  == 'true'
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
-CORS_ALLOWED_ORIGINS = os.environ.get("CORS_ALLOWED_ORIGINS").split(", ")
+CORS_ALLOWED_ORIGINS = os.environ.get("CORS_ALLOWED_ORIGINS")
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
