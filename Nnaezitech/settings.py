@@ -9,9 +9,10 @@ SECRET_KEY = 'django-insecure-ba70!f1_)lwkrt$od-^19hkrc@v0s+22zb07zlo!pvh%dnok!5
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = os.environ.get("DEBUG", 'False').lower()  == 'true'
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 CORS_ALLOWED_ORIGINS = os.environ.get("ALLOWED_ORIGINS").split(" ")
 SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 
 CORS_ALLOW_CREDENTIALS = True
@@ -120,6 +121,6 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/car_images/')
+STATIC_ROOT = BASE_DIR, 'static'
+MEDIA_ROOT = BASE_DIR / 'media/car_images/'
 MEDIA_URL = '/media/'
