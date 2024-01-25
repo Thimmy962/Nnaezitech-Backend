@@ -3,7 +3,7 @@ import uuid
 
 class Car_Image(models.Model):
     car = models.ForeignKey('Car', related_name='images', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='car_images/')
+    image = models.ImageField()
 
 
 class Car(models.Model):
