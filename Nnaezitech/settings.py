@@ -8,17 +8,17 @@ SECRET_KEY = 'django-insecure-ba70!f1_)lwkrt$od-^19hkrc@v0s+22zb07zlo!pvh%dnok!5
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = os.environ.get("DEBUG", 'False').lower()  == 'true'
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
-CORS_ALLOWED_ORIGINS = os.environ.get("ALLOWED_ORIGINS").split(" ")
-SECRET_KEY = os.environ.get("SECRET_KEY")
+# DEBUG = os.environ.get("DEBUG", 'False').lower()  == 'true'
+# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+# CORS_ALLOWED_ORIGINS = os.environ.get("ALLOWED_ORIGINS").split(" ")
+# SECRET_KEY = os.environ.get("SECRET_KEY")
 
-# DEBUG = True
-# ALLOWED_HOSTS = [
+DEBUG = True
+ALLOWED_HOSTS = [
 
-# ]
+]
 
-# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -82,8 +82,8 @@ DATABASES = {
     }
 }
 
-database_url = os.environ.get('DATABASE_URL')
-DATABASES['default'] = parse(database_url)
+# # database_url = os.environ.get('DATABASE_URL')
+# DATABASES['default'] = parse('postgres://nnaezitech_5o3r_user:B83A0jn7CylqxqpxkUVTcmicqjomu5XM@dpg-cmpe0g2cn0vc73cnk7bg-a.frankfurt-postgres.render.com/nnaezitech_5o3r')
 
 
 # Password validation
