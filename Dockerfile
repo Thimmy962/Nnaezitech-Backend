@@ -1,4 +1,5 @@
 FROM python:3.11.4-slim-bullseye
+
 WORKDIR /app
 
 RUN apt-get update
@@ -10,6 +11,6 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-RUN python manage.py cllectstatic -y
+RUN python manage.py collectstatic
 
 ENTRYPOINT [ "gunicorn", "Nnaezitech.wsgi" ]
