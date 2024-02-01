@@ -11,6 +11,6 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-RUN python manage.py collectstatic
+RUN python manage.py collectstatic -y
 
 ENTRYPOINT [ "gunicorn", "Nnaezitech.wsgi" ]
