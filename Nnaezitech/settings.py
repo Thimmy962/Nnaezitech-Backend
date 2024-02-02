@@ -48,8 +48,8 @@ STORAGES = {
     },
 }
 
-AWS_ACCESS_KEY_ID = os.environ.get("ACCESS_KEY").split(" ")
-AWS_SECRET_ACCESS_KEY = os.environ.get("SECRET_ACCESS_KEY").split(" ")
+AWS_ACCESS_KEY_ID = os.environ.get("ACCESS_KEY")
+AWS_SECRET_ACCESS_KEY = os.environ.get("SECRET_ACCESS_KEY")
 AWS_STORAGE_BUCKET_NAME = 'nnaezi-s3-bucket'
 AWS_S3_REGION_NAME = 'eu-central-1'
 
