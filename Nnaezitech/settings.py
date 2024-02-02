@@ -20,7 +20,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # CORS_ALLOW_ALL_ORIGINS = True
 
-# CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_CREDENTIALS = True
 
 # Application definition
 
@@ -40,11 +40,19 @@ INSTALLED_APPS = [
 ]
 
 STORAGES = {
-    # ...
+    "default": {
+        "BACKEND": "storages.backends.s3.S3Storage",
+    },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+
+AWS_ACCESS_KEY_ID = os.environ.get("ACCESS_KEY").split(" ")
+AWS_SECRET_ACCESS_KEY = os.environ.get("SECRET_ACCESS_KEY").split(" ")
+AWS_STORAGE_BUCKET_NAME = 'nnaezi-s3-bucket'
+AWS_S3_REGION_NAME = 'eu-central-1'
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
